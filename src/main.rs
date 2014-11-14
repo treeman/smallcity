@@ -11,65 +11,33 @@ extern crate opengl_graphics;
 extern crate piston;
 
 use std::cell::RefCell;
-//use std::rc::Rc;
 
-use event::{ Events, WindowSettings };
-use sprite::*;
-
-use graphics::*;
-use event::*;
-
+use event::{ Events, WindowSettings, Render, Update, Input };
 use sdl2_window::Sdl2Window;
-use opengl_graphics::{
-    Gl,
-    //Texture,
-};
+
+use game::*;
+
+mod game;
 
 fn main() {
-    let (width, height) = (300, 300);
-    let opengl = shader_version::opengl::OpenGL_3_2;
     let window = Sdl2Window::new(
-        opengl,
+        shader_version::opengl::OpenGL_3_2,
         WindowSettings {
             title: "SmallCity".to_string(),
-            size: [width, height],
+            size: [600, 400],
             fullscreen: false,
             exit_on_esc: true,
             samples: 0,
         }
     );
-
-    let mut scene = Scene::new();
-
-    let ref mut gl = Gl::new(opengl);
+    let mut game = Game::new();
     let window = RefCell::new(window);
     for e in Events::new(&window) {
         match e {
-            Render(args) => {
-                gl.viewport(0, 0, args.width as i32, args.height as i32);
-
-                let c = Context::abs(args.width as f64, args.height as f64);
-                c.rgb(1.0, 0.4, 1.0).draw(gl);
-
-                scene.draw(&c, gl);
-            },
-            Update(args) => {
-
-            },
-            Input(x) => {
-                //println!("{}", x);
-            },
+            Render(ref args) => game.render(args),
+            Update(ref args) => game.update(args),
+            Input(ref args) => game.input(args),
         }
-        //scene.event(&e);
-
-        //e.render(|args| {
-            //gl.viewport(0, 0, args.width as i32, args.height as i32);
-
-            //let c = Context::abs(args.width as f64, args.height as f64);
-            //c.rgb(1.0, 1.0, 1.0).draw(gl);
-
-            //scene.draw(&c, gl);
-        //});
     }
 }
 
