@@ -12,7 +12,8 @@ extern crate piston;
 
 use std::cell::RefCell;
 
-use event::{ Events, WindowSettings, Render, Update, Input };
+use event::Event::{ Render, Update, Input };
+use event::{ Events, WindowSettings };
 use sdl2_window::Sdl2Window;
 
 use game::*;
