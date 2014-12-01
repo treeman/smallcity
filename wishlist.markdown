@@ -1,3 +1,32 @@
+Post-apocalyptic
+================
+
+* Idiocracy
+* Population control (remove unwanted citizens, grow them into jobs)
+    Soylent Green (it's made of humans!)
+* Judge Dredd
+* Medical Despotism (sell organs etc)
+* Sentient Robots
+* Robot parts/organs/augments
+* Virtual reality
+* Mindcontrol
+* Metro
+* S.T.A.L.K.E.R.S
+    scavengers, trespassers, adventurers, loners, killers, explorers, robbers
+* Disease (white-sickness: blindness)
+* Nuclear war
+* Famine
+* Wall-E (recycle all the things!)
+* Twelve Monkeys
+* 9 (2009)
+
+* Steam-punk
+
+* Clockwork machines
+
+Other-things
+============
+
 * Building Variety
     Building designs depends on density, quality of life (safety, health, population satisfaction, etc)
 * Landmarks

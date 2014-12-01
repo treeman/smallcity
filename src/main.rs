@@ -8,6 +8,7 @@ extern crate event;
 extern crate graphics;
 extern crate sdl2_window;
 extern crate opengl_graphics;
+extern crate ai_behavior;
 extern crate piston;
 
 use std::cell::RefCell;
