@@ -1,3 +1,7 @@
+#![allow(unused_imports)]
+#![allow(unused_variables)]
+#![allow(unused_mut)]
+
 extern crate sdl2_window;
 
 use opengl_graphics::{ Gl, Texture };
@@ -8,14 +12,14 @@ use piston::input::*;
 use sprite::*;
 use shader_version::OpenGL;
 
-use ai_behavior::{
+/*use ai_behavior::{
     Action,
     Sequence,
     Wait,
     WaitForever,
     While,
     //Behavior,
-};
+};*/
 
 use std::rc::Rc;
 
@@ -33,6 +37,7 @@ impl Game {
         let mut scene = Scene::new();
         let tex = Path::new("./bin/assets/unsupported.jpg");
         // TODO next line crashes!! :)
+        let tex = Texture::from_path(&tex);
         //let tex = Rc::new(Texture::from_path(&tex).unwrap());
 
         //let mut sprite = Sprite::from_texture(tex.clone());

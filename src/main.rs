@@ -1,5 +1,4 @@
-
-#![feature(globs)]
+#![feature(old_path)]
 
 extern crate shader_version;
 extern crate sprite;
